@@ -1,0 +1,1179 @@
+/* ════════════════════════════════════════════════════════════
+   AUGUST ACTIVITY CALENDAR 2026 — Premium Hero Slider
+   Next Academy • Deep Navy / Dark Purple Theme
+   Mirrors AI Bootcamp slide architecture
+   ════════════════════════════════════════════════════════════ */
+
+/* ═══ BACKGROUND ═══ */
+.na-slide--aug-calendar {
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.na-slide__bg--aug-calendar {
+    background: linear-gradient(135deg, #060818 0%, #0b1030 20%, #120e38 40%, #1b1248 60%, #0e0c30 80%, #060818 100%);
+}
+
+.na-slide__bg--aug-calendar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(108, 99, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(108, 99, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 1;
+    animation: augc-gridShift 35s linear infinite;
+}
+
+.na-slide__bg--aug-calendar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(ellipse at 70% 45%, rgba(108, 99, 255, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 75%, rgba(139, 92, 246, 0.05) 0%, transparent 45%);
+    z-index: 1;
+}
+
+@keyframes augc-gridShift {
+    0% { background-position: 0 0; }
+    100% { background-position: 60px 60px; }
+}
+
+/* ═══ AMBIENT GLOW ORBS ═══ */
+.augc-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.augc-orb--1 {
+    width: 320px;
+    height: 320px;
+    background: rgba(108, 99, 255, 0.06);
+    top: -8%;
+    left: -4%;
+    animation: augc-orbFloat 9s ease-in-out infinite;
+}
+
+.augc-orb--2 {
+    width: 260px;
+    height: 260px;
+    background: rgba(139, 92, 246, 0.04);
+    bottom: -5%;
+    right: 12%;
+    animation: augc-orbFloat 11s ease-in-out 2s infinite;
+}
+
+.augc-orb--3 {
+    width: 200px;
+    height: 200px;
+    background: rgba(108, 99, 255, 0.05);
+    top: 35%;
+    right: 25%;
+    animation: augc-orbFloat 7s ease-in-out 1s infinite;
+}
+
+@keyframes augc-orbFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(12px, -8px) scale(1.04);
+        opacity: 0.75;
+    }
+}
+
+/* ═══ DECORATIVE PARTICLES ═══ */
+.augc-particle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.augc-particle--1 {
+    width: 4px;
+    height: 4px;
+    background: rgba(108, 99, 255, 0.4);
+    top: 20%;
+    left: 15%;
+    animation: augc-particlePulse 3s ease-in-out infinite;
+}
+
+.augc-particle--2 {
+    width: 3px;
+    height: 3px;
+    background: rgba(139, 92, 246, 0.35);
+    top: 45%;
+    left: 40%;
+    animation: augc-particlePulse 4s ease-in-out 1s infinite;
+}
+
+.augc-particle--3 {
+    width: 5px;
+    height: 5px;
+    background: rgba(108, 99, 255, 0.3);
+    bottom: 30%;
+    right: 20%;
+    animation: augc-particlePulse 3.5s ease-in-out 0.5s infinite;
+}
+
+.augc-particle--4 {
+    width: 3px;
+    height: 3px;
+    background: rgba(167, 139, 250, 0.35);
+    top: 60%;
+    right: 40%;
+    animation: augc-particlePulse 4.5s ease-in-out 2s infinite;
+}
+
+@keyframes augc-particlePulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.5); }
+}
+
+/* ═══ LIGHT RAY ═══ */
+.augc-lightray {
+    position: absolute;
+    top: 0;
+    left: 38%;
+    width: 180px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(108, 99, 255, 0.015) 0%, transparent 55%);
+    transform: skewX(-15deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ═══ TOP STRIP ═══ */
+.na-slide__top-strip--aug-calendar {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(139, 92, 246, 0.05));
+    border-bottom: 1px solid rgba(108, 99, 255, 0.1);
+    min-height: 70px;
+    padding: 10px 40px;
+}
+
+.na-slide__top-strip--aug-calendar .na-slide__audience-label {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7rem;
+}
+
+.na-slide__top-strip--aug-calendar .na-slide__badge--yellow {
+    background: rgba(108, 99, 255, 0.15);
+    color: #a78bfa;
+    border-color: rgba(108, 99, 255, 0.3);
+}
+
+.na-slide__top-strip--aug-calendar .na-slide__audience-amp {
+    color: #a78bfa;
+}
+
+.na-slide__top-strip--aug-calendar .na-slide__ai-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.na-slide__top-strip--aug-calendar .na-slide__ai-text strong {
+    color: #6C63FF;
+}
+
+/* ═══ MAIN LAYOUT ═══ */
+.augc-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 30px 60px;
+    gap: 30px;
+    min-height: 0;
+}
+
+/* ═══ LEFT SIDE ═══ */
+.augc-left {
+    flex: 0 0 44%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Eyebrow badge */
+.augc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    border-radius: 50px;
+    padding: 6px 18px;
+    margin-bottom: 20px;
+    width: fit-content;
+    animation: augc-fadeUp 0.8s ease both;
+}
+
+.augc-eyebrow__dot {
+    width: 8px;
+    height: 8px;
+    background: #a78bfa;
+    border-radius: 50%;
+    animation: augc-dotPulse 2s ease-in-out infinite;
+}
+
+.augc-eyebrow__text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+@keyframes augc-dotPulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.5);
+    }
+    50% {
+        opacity: 0.7;
+        box-shadow: 0 0 0 5px rgba(167, 139, 250, 0);
+    }
+}
+
+/* Heading */
+.augc-heading {
+    margin: 0 0 16px 0;
+    line-height: 1.08;
+    animation: augc-fadeUp 0.8s ease 0.1s both;
+}
+
+.augc-heading__line {
+    display: block;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-weight: 900;
+    color: white;
+    letter-spacing: -1.5px;
+}
+
+.augc-heading__accent {
+    background: linear-gradient(135deg, #6C63FF, #8B5CF6, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: augc-gradientShift 4s ease infinite;
+}
+
+.augc-heading__small {
+    display: block;
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0;
+    margin-top: 6px;
+}
+
+.augc-heading__small span {
+    color: rgba(255, 255, 255, 0.35);
+    margin: 0 6px;
+}
+
+@keyframes augc-gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Subtitle */
+.augc-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 480px;
+    font-weight: 400;
+    animation: augc-fadeUp 0.8s ease 0.2s both;
+}
+
+/* CTA Buttons */
+.augc-ctas {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    animation: augc-fadeUp 0.8s ease 0.3s both;
+}
+
+.augc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 30px;
+    background: linear-gradient(135deg, #6C63FF, #8B5CF6);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 20px rgba(108, 99, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.augc-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+    transition: left 0.5s ease;
+}
+
+.augc-btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.45);
+    color: white;
+    text-decoration: none;
+}
+
+.augc-btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Info badges */
+.augc-info-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    animation: augc-fadeUp 0.8s ease 0.4s both;
+}
+
+.augc-info-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.augc-info-badge i {
+    color: #6C63FF;
+    font-size: 0.8rem;
+}
+
+.augc-info-badge--highlight {
+    border-color: rgba(167, 139, 250, 0.2);
+    background: rgba(167, 139, 250, 0.06);
+}
+
+.augc-info-badge--highlight i {
+    color: #a78bfa;
+}
+
+
+/* ═══ RIGHT SIDE — CALENDAR CARD + FLOATING LABELS ═══ */
+.augc-right {
+    flex: 0 0 56%;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+/* Central glow behind the card */
+.augc-card-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, rgba(139, 92, 246, 0.06) 40%, transparent 70%);
+    filter: blur(50px);
+    z-index: 0;
+    animation: augc-cardGlow 4s ease-in-out infinite;
+}
+
+@keyframes augc-cardGlow {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+/* ═══ MAIN CALENDAR CARD ═══ */
+.augc-calendar-card {
+    position: relative;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 22px 20px 18px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    animation: augc-fadeUp 0.8s ease 0.3s both;
+}
+
+.augc-calendar-card__header {
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.augc-calendar-card__month {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a78bfa;
+    margin-bottom: 2px;
+}
+
+.augc-calendar-card__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.augc-calendar-card__icon {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 1rem;
+    color: #a78bfa;
+}
+
+/* ═══ ACTIVITY ITEMS ═══ */
+.augc-activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.augc-activity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: default;
+}
+
+.augc-activity:hover {
+    transform: translateY(-4px) scale(1.03);
+    background: rgba(108, 99, 255, 0.08);
+    border-color: rgba(108, 99, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.15);
+}
+
+.augc-activity__num {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    background: rgba(108, 99, 255, 0.12);
+    color: #a78bfa;
+    border: 1px solid rgba(108, 99, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.augc-activity:hover .augc-activity__num {
+    background: rgba(108, 99, 255, 0.2);
+    transform: scale(1.08);
+}
+
+/* Alternate icon colors */
+.augc-activity:nth-child(2) .augc-activity__num {
+    background: rgba(251, 146, 60, 0.1);
+    color: #fb923c;
+    border-color: rgba(251, 146, 60, 0.15);
+}
+
+.augc-activity:nth-child(3) .augc-activity__num {
+    background: rgba(0, 229, 255, 0.08);
+    color: #00E5FF;
+    border-color: rgba(0, 229, 255, 0.12);
+}
+
+.augc-activity:nth-child(4) .augc-activity__num {
+    background: rgba(0, 255, 153, 0.08);
+    color: #00FF99;
+    border-color: rgba(0, 255, 153, 0.12);
+}
+
+.augc-activity:nth-child(5) .augc-activity__num {
+    background: rgba(236, 72, 153, 0.1);
+    color: #ec4899;
+    border-color: rgba(236, 72, 153, 0.15);
+}
+
+.augc-activity:nth-child(6) .augc-activity__num {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.15);
+}
+
+.augc-activity__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.augc-activity__name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.augc-activity__sub {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.38);
+    font-weight: 500;
+}
+
+.augc-activity__date {
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #a78bfa;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 4px 10px;
+    background: rgba(108, 99, 255, 0.08);
+    border-radius: 6px;
+    border: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+/* Staggered entrance animations for activities */
+.augc-activity:nth-child(1) { animation: augc-fadeUp 0.5s ease 0.4s both; }
+.augc-activity:nth-child(2) { animation: augc-fadeUp 0.5s ease 0.5s both; }
+.augc-activity:nth-child(3) { animation: augc-fadeUp 0.5s ease 0.6s both; }
+.augc-activity:nth-child(4) { animation: augc-fadeUp 0.5s ease 0.7s both; }
+.augc-activity:nth-child(5) { animation: augc-fadeUp 0.5s ease 0.8s both; }
+.augc-activity:nth-child(6) { animation: augc-fadeUp 0.5s ease 0.9s both; }
+
+
+/* ═══ FLOATING GLASS CARDS ═══ */
+.augc-float-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    z-index: 15;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.augc-float-card:hover {
+    transform: scale(1.04) translateY(-3px) !important;
+    box-shadow: 0 10px 35px rgba(108, 99, 255, 0.25);
+}
+
+.augc-float-card__icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.augc-float-card:hover .augc-float-card__icon {
+    transform: scale(1.15);
+}
+
+/* Floating card positions */
+.augc-float-card--1 {
+    top: 15%;
+    right: 5%;
+    animation: augc-floatA 7s ease-in-out infinite;
+}
+
+.augc-float-card--2 {
+    top: 22%;
+    left: 3%;
+    animation: augc-floatB 8s ease-in-out 0.5s infinite;
+}
+
+.augc-float-card--3 {
+    top: 52%;
+    right: 0%;
+    animation: augc-floatC 6.5s ease-in-out 1s infinite;
+}
+
+.augc-float-card--4 {
+    bottom: 22%;
+    left: 0%;
+    animation: augc-floatD 7.5s ease-in-out 1.5s infinite;
+}
+
+.augc-float-card--5 {
+    bottom: 8%;
+    right: 8%;
+    animation: augc-floatA 8s ease-in-out 2s infinite;
+}
+
+@keyframes augc-floatA {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    33% { transform: translateY(-7px) translateX(3px); }
+    66% { transform: translateY(3px) translateX(-2px); }
+}
+
+@keyframes augc-floatB {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    40% { transform: translateY(5px) translateX(-4px); }
+    70% { transform: translateY(-5px) translateX(2px); }
+}
+
+@keyframes augc-floatC {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-8px) translateX(-3px); }
+}
+
+@keyframes augc-floatD {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    30% { transform: translateY(4px) translateX(5px); }
+    60% { transform: translateY(-5px) translateX(-2px); }
+}
+
+
+/* ═══ BOTTOM SECTION ═══ */
+.augc-bottom {
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+/* Activities strip */
+.augc-activities-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 40px;
+    background: rgba(108, 99, 255, 0.05);
+    border-top: 1px solid rgba(108, 99, 255, 0.08);
+    border-bottom: 1px solid rgba(108, 99, 255, 0.05);
+    overflow-x: auto;
+}
+
+.augc-activities-row__title {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #6C63FF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.augc-activities-row__title i {
+    font-size: 0.85rem;
+}
+
+.augc-activities-row__items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.augc-activities-row__chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.augc-activities-row__chip:hover {
+    background: rgba(108, 99, 255, 0.08);
+    border-color: rgba(108, 99, 255, 0.2);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Stats Row */
+.augc-stats-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.06), rgba(139, 92, 246, 0.03));
+    border-top: 1px solid rgba(108, 99, 255, 0.08);
+}
+
+.augc-stat-card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    position: relative;
+    transition: background 0.3s ease;
+    cursor: default;
+}
+
+.augc-stat-card::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.augc-stat-card:last-child::after {
+    display: none;
+}
+
+.augc-stat-card:hover {
+    background: rgba(108, 99, 255, 0.04);
+}
+
+.augc-stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    background: rgba(108, 99, 255, 0.1);
+    color: #6C63FF;
+    border: 1px solid rgba(108, 99, 255, 0.12);
+}
+
+.augc-stat-card:nth-child(2) .augc-stat-icon {
+    background: rgba(0, 229, 255, 0.08);
+    color: #00E5FF;
+    border-color: rgba(0, 229, 255, 0.12);
+}
+
+.augc-stat-card:nth-child(3) .augc-stat-icon {
+    background: rgba(0, 255, 153, 0.08);
+    color: #00FF99;
+    border-color: rgba(0, 255, 153, 0.12);
+}
+
+.augc-stat-card:nth-child(4) .augc-stat-icon {
+    background: rgba(251, 191, 36, 0.08);
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.12);
+}
+
+.augc-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.augc-stat-value {
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+}
+
+.augc-stat-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* ═══ ANIMATION UTILITIES ═══ */
+@keyframes augc-fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════ */
+
+/* Large desktop */
+@media (max-width: 1400px) {
+    .augc-content {
+        padding: 25px 40px;
+        gap: 20px;
+    }
+
+    .augc-heading__line {
+        font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+    }
+
+    .augc-calendar-card {
+        max-width: 380px;
+        padding: 18px 16px 14px;
+    }
+}
+
+/* Standard desktop */
+@media (max-width: 1200px) {
+    .augc-content {
+        padding: 20px 30px;
+        gap: 15px;
+    }
+
+    .augc-heading__line {
+        font-size: clamp(2rem, 3.2vw, 3rem);
+    }
+
+    .augc-heading__small {
+        font-size: clamp(1rem, 1.6vw, 1.3rem);
+    }
+
+    .augc-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .augc-float-card {
+        padding: 7px 12px;
+        font-size: 0.72rem;
+    }
+
+    .augc-calendar-card {
+        max-width: 360px;
+    }
+
+    .augc-activity {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+
+    .augc-activity__name {
+        font-size: 0.72rem;
+    }
+
+    .augc-activity__num {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Tablet landscape */
+@media (max-width: 991px) {
+    .augc-content {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .augc-left {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .augc-right {
+        flex: none;
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .augc-eyebrow {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .augc-heading {
+        text-align: center;
+    }
+
+    .augc-subtitle {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .augc-ctas {
+        justify-content: center;
+    }
+
+    .augc-info-badges {
+        justify-content: center;
+    }
+
+    .augc-calendar-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Hide floating cards on tablet */
+    .augc-float-card {
+        display: none;
+    }
+
+    .augc-activities-row {
+        padding: 8px 20px;
+        gap: 10px;
+    }
+
+    .augc-stat-card {
+        padding: 10px 14px;
+    }
+
+    .augc-stat-value {
+        font-size: 0.88rem;
+    }
+
+    .augc-stat-label {
+        font-size: 0.62rem;
+    }
+
+    .augc-stat-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .na-slide__top-strip--aug-calendar {
+        padding: 8px 20px;
+        min-height: 50px;
+    }
+}
+
+/* Tablet portrait / large phone */
+@media (max-width: 768px) {
+    .augc-content {
+        padding: 10px 15px;
+        gap: 6px;
+    }
+
+    .augc-heading__line {
+        font-size: clamp(1.7rem, 6vw, 2.2rem);
+    }
+
+    .augc-heading__small {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+
+    .augc-eyebrow {
+        margin-bottom: 12px;
+    }
+
+    .augc-subtitle {
+        font-size: 0.82rem;
+        margin-bottom: 14px;
+    }
+
+    .augc-btn-primary {
+        padding: 11px 22px;
+        font-size: 0.85rem;
+    }
+
+    .augc-info-badges {
+        gap: 6px;
+    }
+
+    .augc-info-badge {
+        padding: 5px 10px;
+        font-size: 0.72rem;
+    }
+
+    .augc-right {
+        min-height: auto;
+    }
+
+    .augc-calendar-card {
+        max-width: 100%;
+    }
+
+    .augc-card-glow {
+        width: 180px;
+        height: 180px;
+    }
+
+    .augc-stats-row {
+        flex-wrap: wrap;
+    }
+
+    .augc-stat-card {
+        flex: 0 0 50%;
+        padding: 8px 10px;
+    }
+
+    .augc-stat-card:nth-child(2)::after {
+        display: none;
+    }
+
+    .augc-activities-row {
+        padding: 6px 15px;
+    }
+
+    .augc-activities-row__items {
+        gap: 6px;
+    }
+
+    .augc-activities-row__chip {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+    }
+
+    .na-slide__top-strip--aug-calendar {
+        padding: 6px 15px;
+        min-height: 45px;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .na-slide__top-strip--aug-calendar .na-slide__audience {
+        display: none;
+    }
+}
+
+/* Small phone */
+@media (max-width: 480px) {
+    .augc-content {
+        padding: 8px 12px;
+    }
+
+    .augc-heading__line {
+        font-size: clamp(1.4rem, 7vw, 1.8rem);
+    }
+
+    .augc-heading__small {
+        font-size: 0.88rem;
+    }
+
+    .augc-eyebrow {
+        padding: 4px 12px;
+        margin-bottom: 10px;
+    }
+
+    .augc-eyebrow__text {
+        font-size: 0.65rem;
+    }
+
+    .augc-subtitle {
+        font-size: 0.78rem;
+    }
+
+    .augc-ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .augc-btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .augc-activity {
+        padding: 7px 8px;
+        gap: 8px;
+    }
+
+    .augc-activity__num {
+        width: 26px;
+        height: 26px;
+        font-size: 0.65rem;
+    }
+
+    .augc-activity__name {
+        font-size: 0.7rem;
+    }
+
+    .augc-activity__sub {
+        font-size: 0.6rem;
+    }
+
+    .augc-activity__date {
+        font-size: 0.6rem;
+        padding: 3px 7px;
+    }
+
+    .augc-stat-card {
+        gap: 6px;
+        padding: 6px 8px;
+    }
+
+    .augc-stat-value {
+        font-size: 0.78rem;
+    }
+
+    .augc-stat-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+    }
+
+    .augc-activities-row__title {
+        font-size: 0.6rem;
+    }
+
+    .augc-activities-row__chip {
+        font-size: 0.6rem;
+        padding: 2px 8px;
+    }
+
+    .na-slide__top-strip--aug-calendar .na-slide__ai-academy {
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+# Next Academy — robots.txt
+# Allow search engines on public pages, block admin/auth/student panels
+
+User-agent: *
+Allow: /
+Allow: /index.php
+Allow: /courses.php
+Allow: /about.php
+Allow: /contact.php
+Allow: /gallery.php
+Allow: /digital-marketing.php
+Allow: /assets/
+
+# Block admin, auth, and student portals from indexing
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /student/
+Disallow: /includes/
+
+# Sitemap
+Sitemap: https://nextacademyindia.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 2

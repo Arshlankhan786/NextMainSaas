@@ -1,0 +1,233 @@
+# Project Overview: NextMain
+This is a comprehensive PHP-based web application containing both a public-facing website, an administration panel, and a student portal. It is likely an educational or institute management system (possibly for a digital marketing or tech academy).
+
+## Key Components
+
+### 1. Public Website
+- **Pages**: `index.php`, `about.php`, `contact.php`, `courses.php`, `gallery.php`, `digital-marketing.php`, `digital-marketing-dark.php`
+- **Purpose**: Provides public information about the academy, courses offered (like Digital Marketing, Full Stack, AI), and handles inquiries.
+
+### 2. Admin Panel (`/admin`)
+- **Core Functionality**: Managing the institute's operations.
+- **Key Modules**:
+  - Student Management: `students.php`, `student_details.php`, `student_groups.php`, `hold_students.php`, `past_students.php`
+  - Course & Topic Management: `courses.php`, `categories.php`
+  - Assessment & Tasks: `task_manager.php`, `assign_test.php`, `create_test.php`, `typing_results.php`
+  - Finance: `payments.php`, `add_payment.php`, `expenses.php`, `receipt.php`
+  - Analytics & Reports: `reports.php`, `student_analytics.php`, `attendance_report.php`
+  - Configuration/Auth: `login.php`, `settings.php`, `admins.php`
+
+### 3. Student Portal (`/student`)
+- **Core Functionality**: Portal for enrolled students.
+- **Key Modules**:
+  - Dashboard & Profile: `dashboard.php`, `profile.php`
+  - Learning & Assessment: `projects.php`, `take_quiz.php`, `quiz_result.php`, `my_tests.php`, `typing_competition.php`
+  - Tasks & Progress: `task_manager.php`, `attendance.php`
+  - Finance: `payments.php`, `receipts.php`
+
+### 4. API / AJAX Endpoints
+- **Admin AJAX (`/admin/ajax`)**: Scripts for dynamic operations like `manage_projects.php`, `student_analytics_data.php`, `fetch_test_assignments.php`.
+- **Student AJAX (`/student/ajax`)**: Scripts for quiz submissions (`submit_quiz.php`), saving typing results, etc.
+
+### 5. Config & Includes
+- **`/admin/config`**: Database credentials, email settings, and auth configuration.
+- **`/includes`**: Shared UI elements (navbar, footer, splash-screen).
+- **`/admin/includes` & `/student/includes`**: Portal-specific headers and footers.
+
+## Directory Structure
+(Generated with tree /A /F)
+```
+C:\XAMPP\HTDOCS\NEXTMAIN
+|   .htaccess
+|   about.php
+|   contact.php
+|   courses.php
+|   digital-marketing-dark.php
+|   digital-marketing.php
+|   favicon.ico
+|   gallery.php
+|   implementation_plan.md
+|   index.php
+|   inquiry_submit.php
+|   robots.txt
+|   sitemap.xml
+|   u946810828_Next.sql
+|   
++---admin
+|   |   .htaccess
+|   |   add_payment.php
+|   |   admins.php
+|   |   assign_test.php
+|   |   attendance_report.php
+|   |   categories.php
+|   |   check_task_tables.php
+|   |   completed_tasks.php
+|   |   courses.php
+|   |   create_test.php
+|   |   debug_task_manager.php
+|   |   expenses.php
+|   |   forgot_password.php
+|   |   group_details.php
+|   |   hold_students.php
+|   |   index.php
+|   |   inquiries.php
+|   |   inquiry_details.php
+|   |   login.php
+|   |   logout.php
+|   |   manual_task_cron.php
+|   |   overdue_students_full_list.php
+|   |   paid_students_full_list.php
+|   |   past_students.php
+|   |   past_student_details.php
+|   |   payments.php
+|   |   profile.php
+|   |   project_verification.php
+|   |   ranking.php
+|   |   README.md
+|   |   receipt.php
+|   |   reports.php
+|   |   reset_password.php
+|   |   send_attendance_notification.php
+|   |   send_notification.php
+|   |   settings.php
+|   |   students.php
+|   |   students_course_expiry.php
+|   |   student_analytics.php
+|   |   student_details.php
+|   |   student_groups.php
+|   |   student_hold_actions.php
+|   |   student_portal_actions.php
+|   |   student_project_analytics.php
+|   |   student_task_manager.php
+|   |   task_manager.php
+|   |   task_manager_actions.php
+|   |   typing_results.php
+|   |   
+|   +---ajax
+|   |       delete_test.php
+|   |       fetch_test_assignments.php
+|   |       get_course.php
+|   |       get_courses_by_category.php
+|   |       get_course_fees.php
+|   |       get_student_attendance.php
+|   |       manage_course_topics.php
+|   |       manage_group_members.php
+|   |       manage_group_topics.php
+|   |       manage_manual_points.php
+|   |       manage_projects.php
+|   |       manage_topics.php
+|   |       student_analytics_data.php
+|   |       student_project_actions.php
+|   |       unassign_test.php
+|   |       
+|   +---assets
+|   |   |   Next-logo.png
+|   |   |   
+|   |   +---css
+|   |   |       dashboard_compact.css
+|   |   |       style.css
+|   |   |       task_manager.css
+|   |   |       
+|   |   \---js
+|   |           script.js
+|   |           task_manager.js
+|   |           
+|   +---config
+|   |       auth.php
+|   |       database.php
+|   |       db_credentials.php
+|   |       email.php
+|   |       footer_cache.php
+|   |       
+|   +---includes
+|   |   |   auth_check.php
+|   |   |   footer.php
+|   |   |   header.php
+|   |   |   ranking_helper.php
+|   |   |   
+|   |   \---uploads
+|   |       (Student Uploads...)
+|   |               
+|   \---uploads
+|       (Student Uploads...)
+|               
++---assets
+|   +---css
+|   |       ai-bootcamp-slide.css
+|   |       august-calendar-slide.css
+|   |       digital-marketing.css
+|   |       public-style.css
+|   |       style.css
+|   |       
+|   +---images
+|   |       (Public Images...)
+|   |   \---gallery
+|   \---js
+|           digital-marketing copy.js
+|           digital-marketing.js
+|           
++---auth
+|       login.php
+|       
++---includes
+|       favicon.ico
+|       footer.php
+|       navbar.php
+|       splash-screen.php
+|       
+\---student
+    |   attendance.php
+    |   attendance_action.php
+    |   dashboard.php
+    |   logout.php
+    |   my_tests.php
+    |   notifications.php
+    |   payments.php
+    |   profile.php
+    |   projects.php
+    |   quiz_result.php
+    |   receipts.php
+    |   receipt_download.php
+    |   receipt_view.php
+    |   setup_task_db.php
+    |   student_auth.php
+    |   take_quiz.php
+    |   task_manager.php
+    |   typing_competition.php
+    |   
+    +---ajax
+    |   |   fetch_quiz_questions.php
+    |   |   get_attendance.php
+    |   |   project_actions.php
+    |   |   save_quiz_answer.php
+    |   |   save_quiz_answers_batch.php
+    |   |   save_typing_result.php
+    |   |   submit_quiz.php
+    |   |   
+    |   \---typing_assets
+    |           typing.css
+    |           typing.js
+    |           
+    +---assets
+    |   \---css
+    |           dashboard.css
+    |           student-style.css
+    |           student-theme.css
+    |           
+    +---config
+    |       student_auth.php
+    |       
+    +---includes
+    |       footer.php
+    |       header.php
+    |       
+    +---quiz_assets
+    |       course_progress.php
+    |       dashboard.php
+    |       quiz.css
+    |       quiz.js
+    |       
+    \---typing_assets
+            typing.css
+            typing.js
+```

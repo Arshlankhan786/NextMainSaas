@@ -1,0 +1,34 @@
+# Increase upload limits
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+# Enable error logging (not display)
+php_flag display_errors Off
+php_flag log_errors On
+php_value error_log /home/u946810828/logs/php_error.log
+
+# Force HTTPS (optional)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect config files
+<Files "database.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "db_credentials.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "footer_cache.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
